@@ -5,7 +5,7 @@ const Navbar = () => {
 
     return (
         <div className="text-white m-10">
-            <div className="flex flex-col items-center bg-[#171D2F] rounded-lg h-[100vh]">
+            <div className="flex flex-col items-center bg-[#171D2F] rounded-lg h-[90vh]">
                 <div className="text-red-500 text-4xl my-4">
                     <FaUikit />
                 </div>
