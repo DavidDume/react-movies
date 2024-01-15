@@ -3,9 +3,10 @@ import { FaBookmark } from "react-icons/fa"
 
 interface Props {
     movies: Array<Movie>
+    handleAddBookmarks: (movie: Movie) => void
 }
 
-const Trending = ({ movies }: Props) => {
+const Trending = ({ movies, handleAddBookmarks }: Props) => {
     const path = "http://image.tmdb.org/t/p/w500"
     return (
         <div className="text-white">
@@ -24,7 +25,10 @@ const Trending = ({ movies }: Props) => {
                                     <div>{item.release_date.slice(0, 4)}</div>
                                     <h1 className="text-xl">{item.title}</h1>
                                 </div>
-                                <div className="absolute top-2 right-2 hover:cursor-pointer">
+                                <div
+                                    className="absolute top-2 right-2 hover:cursor-pointer"
+                                    onClick={() => handleAddBookmarks(item)}
+                                >
                                     <FaBookmark />
                                 </div>
                             </div>
